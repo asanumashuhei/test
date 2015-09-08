@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery課題　浅沼</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+	<script>
+
+	 
+// ①
+// 	function Number(){	
+// 		var x = "12345".split("").reverse("").join("");
+// 	 	return x;
+// }
+// var y = Number();
+// console.log(y);
+// ↑（自分の回答）
+// 文字列をいったん１文字ずつ配列にばらしてから→配列を逆ソートし→再びつなぎ合わせて文字列にする。
+
+// 模範回答
+function reverseNumber(x){
+	return x.split("").reverse().join("");
+}
+var y = reverseNumber("12345678");
+console.log(y);
+
+
+// ②
+	function Alphabet(gs){
+	return gs.split("").sort().join("");
+}
+var z = Alphabet("goodstaff");
+	console.log(z);
+
+// ③
+	function Upper(up){
+		var b = up.match(/\b[a-zA-Z]/g).join("").toUpperCase().split("");
+		return up.replace(/\b[a-zA-Z]/g, "a").replace(/a/g, b);
+		// return up.replace(/\b[a-zA-Z]/, o);
+		
+	};
+var a = Upper("my name is asanuma");
+console.log(a);
+
+// ④
+
+function randClick(len){
+		
+		var moji = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+		var mojilen = moji.length;
+		var r = "";
+		for(var i=0; i<len; i++){
+		  r += moji[Math.floor(Math.random()*mojilen)];
+		}
+		return r;
+		
+}; 
+
+		var ranran = randClick(8);
+		console.log(ranran);
+	
+
+</script>
+</head>
+<body>
+
+<!-- <button>
+	click
+</button> -->
+<form id="rclick">
+<input type="button" value="click" onclick="randClick()">
+</form>
+
+</body>
+</html>
