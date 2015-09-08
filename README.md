@@ -4,7 +4,7 @@ my first repo
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>kumagaisan</title>
 </head>
 <body>
   
